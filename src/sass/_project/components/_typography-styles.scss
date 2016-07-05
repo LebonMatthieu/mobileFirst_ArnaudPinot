@@ -1,0 +1,75 @@
+
+/*****************/
+/****** Titles *****/
+/*****************/
+
+@at-root{
+
+	.title-alpha
+	{
+		@include font-style-4;
+
+	}
+
+
+	.title-beta
+	{
+		@include font-style-5;
+	}
+
+
+	.title-gamma
+	{
+		@include font-style-6;
+	}
+
+	.title-delta
+	{
+		@include font-style-7;
+	}
+}
+
+
+
+/*****************/
+/****** Text *****/
+/*****************/
+
+@at-root{
+
+	.text-alpha
+	{
+		@include font-style-1;
+	}
+
+
+	.text-beta
+	{
+		@include font-style-2;
+	}
+
+
+	.text-gamma
+	{
+		@include font-style-3;
+	}
+
+
+	// .text-delta
+	// {
+	// 	@include font-style-4;
+	// }
+
+
+	// &-text-epsilon
+	// {
+
+	// }
+
+
+	// &-text-omega
+	// {
+
+	// }
+
+}

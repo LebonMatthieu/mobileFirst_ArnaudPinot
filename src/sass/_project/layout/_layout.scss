@@ -1,0 +1,12 @@
+/* # Layout */
+
+&-centered{
+	margin: auto;
+	padding: 0 $gutter;
+	max-width: 136rem;
+
+	@include mq($from: desktop) {
+		padding: 0 $desktop-gutter;
+    }
+
+}

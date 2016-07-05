@@ -1,0 +1,107 @@
+/* Déclaration des éléments de bases pour les éléments HTML5, les classes utiles, les titres et les styles de textes*/
+
+/*****************/
+/******HTML5 Elements*****/
+/*****************/
+@at-root{
+
+	* {
+	  -webkit-box-sizing: border-box;
+	     -moz-box-sizing: border-box;
+	          box-sizing: border-box;
+	}
+
+
+	html
+	{
+		font-size: 62.5%;
+		position: relative;
+		color:$dark;
+		background-color: $clear;
+		height: 100%;
+	    -webkit-font-smoothing: antialiased;
+	}
+
+
+	body
+	{
+		height: 100%; 
+	}
+
+
+	*, *::before, *::after 
+	{
+	    background-repeat: no-repeat;
+	}
+	 
+
+	h1,h2,h3,h4
+	{
+		margin: 0;
+	}
+
+
+	p
+	{
+		margin:0;
+	}
+
+
+	svg,img
+	{
+		width: 100%;
+		max-width:100%;
+	}
+
+
+	ul
+	{
+		margin:0;
+		padding:0;
+	}
+
+
+	li
+	{
+		list-style: none
+	}
+
+
+	a
+	{
+		text-decoration:none;
+		color: inherit; 
+	}
+
+
+	blockquote
+	{
+		padding:0;
+		margin:0;
+	}
+
+}
+
+
+// Classes utiles
+
+@at-root{
+	
+	.overflow
+	{
+		overflow:hidden;
+	}
+
+
+	.uppercase
+	{
+		text-transform:uppercase;
+	}
+
+
+	.hide-for-viewer
+	{
+		@include hide-for-viewer;
+	}
+
+}

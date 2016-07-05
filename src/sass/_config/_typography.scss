@@ -1,0 +1,79 @@
+@mixin font-style-1 ($font: $font-regular, $weight : 500, $style: normal, $line-height : 1){  // Medium
+  font:{
+    family: $font;
+      style: $style;
+    size: 16px;
+    size: 1.6rem;
+    weight: $weight;
+  }
+    line-height: $line-height;
+}
+
+
+@mixin font-style-2 ($font: $font-regular, $weight : 700, $style: normal, $line-height : 18 / 18){ //Semibold
+  font:{
+    family: $font;
+      style: $style;
+    size: 18px;
+    size: 1.8rem;
+    weight: $weight;
+  }
+    line-height: $line-height;
+}
+
+
+@mixin font-style-3 ($font: $font-regular, $weight : 500, $style: normal, $line-height : 28/20){ //Medium
+  font:{
+    family: $font;
+      style: $style;
+    size: 20px;
+    size: 2rem;
+    weight: $weight;
+  }
+    line-height: $line-height;
+
+
+}
+
+
+@mixin font-style-4 ($font: $font-regular, $weight : 700, $style: normal, $line-height : 32/22){ 
+  font:{
+    family: $font;
+      style: $style;
+    size: 22px;
+    size: 2.2rem;
+    weight: $weight;
+  // }
+    line-height: $line-height;
+
+}
+
+
+@mixin font-style-5 ($font: $font-regular, $weight : 800, $style: normal, $line-height : 70/60){ 
+  font:{
+    family: $font;
+      style: $style;
+    size: 60px;
+    size: 6rem;
+    weight: $weight;
+  }
+    line-height: $line-height;
+
+}
+
+
+@mixin font-style-6 ($font: $font-regular, $weight : 700, $style: normal, $line-height : 1){ 
+  font:{
+    family: $font;
+      style: $style;
+    size: 100px;
+    size: 10rem;
+    weight: $weight;
+  }
+    line-height: $line-height;
+}
+
+
+
+
+

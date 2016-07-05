@@ -1,0 +1,79 @@
+
+/****************/
+/* # Préfixes des classes générées */
+/****************/
+
+/*
+Ces classes sont ajoutées devant les sélecteurs.
+
+ - `xx` correspond à votre projet (et doit être configuré).
+ 
+*/
+
+/*
+(Il est possible de sortir de cette encapsulation avec `@at-root{}`.)
+*/
+
+/*
+
+Prefix : ap 
+
+ */
+
+$prefix-project: 'ap' !default;
+
+
+
+
+/****************/
+/* # Grille */
+/****************/
+
+/*
+ - `gutter` : largeur des gouttières ;
+*/
+
+$gutter: 2rem !default;
+$desktop-gutter: 4rem !default;
+
+
+
+
+/****************/
+/* # Media Queries with _Sass-mq_ */
+/****************/
+
+/* https://github.com/sass-mq/sass-mq */
+
+$mq-breakpoints: (
+	mobile:               	320px,
+	tablet:               	720px,
+	desktop:              	1024px,
+	wide:                 	1400px,
+);
+
+$mq-show-breakpoints: (mobile, tablet, desktop, wide);
+
+
+
+
+/****************/
+/* # Variables */
+/****************/
+
+// Fonts
+$font-regular: 'Work Sans', sans-serif !default;
+
+// Colors 
+$dark: #000 !default;
+$clear: #fff !default;
+$default-bgc: #fff !default;
+
+// Theme colors
+
+$theme-color: #3142FF !default; //Blue
+$alt-theme-color: #C7EAFF !default; //Cyan
+
+
+
+

@@ -1,0 +1,13 @@
+/* # JS Clickbox */
+
+// NB: the .no-touchevents class is created by Modernizr.
+// Thus, it's recommended you use Modernizr in your project, 
+// by setting up the Touch Events test.
+
+.js-clickbox
+{
+	.no-touchevents &.is-hover
+	{
+		cursor: pointer;
+	}
+}
