@@ -10,7 +10,7 @@
 }
 
 
-@mixin font-style-2 ($font: $font-regular, $weight : 700, $style: normal, $line-height : 18 / 18){ //Semibold
+@mixin font-style-2 ($font: $font-regular, $weight : 500, $style: normal, $line-height : 18 / 18){ //Semibold
   font:{
     family: $font;
       style: $style;

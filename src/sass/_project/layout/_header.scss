@@ -1,5 +1,24 @@
 &-header
-{
+{	
+	padding-top: 2rem;
 
+	&__logo{
+		display: block;
+		width: $desktop-logo-h;
+		height: $desktop-logo-h;
+
+		svg{
+
+			path{
+				fill: $theme-color;
+			}
+
+			rect{
+				fill: $theme-color;
+			}
+			
+		}
+
+	}
 
 }
