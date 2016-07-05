@@ -222,7 +222,7 @@ gulp.task('minScripts', ['scripts'], function(){
 gulp.task('browser-sync', function() {
     return browserSync.init({
         server: {
-            baseDir     : "./",
+            baseDir     : distDir,
             directory   : true
         },
         browser: "google chrome",
