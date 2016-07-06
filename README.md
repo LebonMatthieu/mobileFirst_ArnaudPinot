@@ -1,8 +1,5 @@
-# mobileFirst_ArnaudPinot
-School Project about Mobile First. Good occasion to make a new portfolio
 
-
-**# mobileFirst_ArnaudPinot **
+** mobileFirst_ArnaudPinot **
 =========
 
 ### Consultation
