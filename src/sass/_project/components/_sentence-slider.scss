@@ -1,10 +1,15 @@
 &-header{
+
 	&__word-animation{
 		position: relative;
 	    width: 100vw;
-	    height: 10rem;
+	    height: 14rem;
 	    margin-top: 3rem;
 	    overflow: hidden;
+
+	    @include mq($from: desktop){
+	    	height: 10rem;
+	    }
 
 	    &__wrapper{
 			position: absolute;
@@ -22,9 +27,9 @@
 			white-space: nowrap;
 			font-size: 0;
 
-			-webkit-animation: translate-keywords linear 8s infinite;
-		  	-moz-animation: translate-keywords linear 8s infinite;
-		  	animation: translate-keywords linear 8s infinite;
+			// -webkit-animation: translate-keywords linear 8s infinite;
+		 //  	-moz-animation: translate-keywords linear 8s infinite;
+		 //  	animation: translate-keywords linear 8s infinite;
 
 		  	span,
 		  	h2{
@@ -34,20 +39,25 @@
 		    }
 
 	    }
+
     }
+
 }
 
 
 
 @include keyframes(translate-keywords) {
+
    0% {
 	    -ms-transform: translateX(0); /* IE 9 */
     	-webkit-transform: translateX(0); /* Chrome, Safari, Opera */
 		transform: translateX(0);
 	}
+
 	100% {
 	    -ms-transform: translateX(-100%); /* IE 9 */
     	-webkit-transform: translateX(-100%); /* Chrome, Safari, Opera */
 		transform: translateX(-100%);
 	}
+
 }
