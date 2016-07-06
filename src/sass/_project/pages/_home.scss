@@ -1,0 +1,52 @@
+&-introduction,
+&-references{
+	
+	padding-top: 7rem;
+
+	&__content{
+		max-width: 345px;
+	    margin-right: 0;
+	    margin-left: auto;
+	    display: block;
+	}
+
+}    
+
+
+&-references{
+	
+	&__title{
+		display: inline-block;
+		position: relative;
+		margin-bottom: 2rem;
+		
+		&:after{
+			content:'';
+			display: block;
+			position: absolute;
+			bottom: -1rem;
+			left: 0;
+			width: 40%;
+			height: 0.2rem;
+			background-color: $dark;
+		}
+	}
+
+	&__list{
+
+		&__item{
+			display: inline;
+
+			&:after{
+				content: ".";
+				color: $dark;
+			}
+
+			&:last-child(){
+				&:after{
+					content:'';
+				}
+			}
+		}
+	}
+}    
