@@ -7,7 +7,7 @@
 
 	.title-alpha
 	{
-		@include font-style-4;
+		@include font-style-2 ($font: $font-regular, $weight : 700, $style: normal, $line-height : 17 / 17);
 
 	}
 
@@ -23,10 +23,7 @@
 		@include font-style-6;
 	}
 
-	// .title-delta
-	// {
-	// 	@include font-style-7;
-	// }
+
 }
 
 
@@ -55,10 +52,10 @@
 	}
 
 
-	// .text-delta
-	// {
-	// 	@include font-style-4;
-	// }
+	.text-delta
+	{
+		@include font-style-4;
+	}
 
 
 	// &-text-epsilon
