@@ -1,3 +1,62 @@
+&-navigation{
+	position: absolute;
+	left: 0;
+	right: 0; 
+	$calc: ($desktop-logo-h / 2) + ($desktop-gutter / 2);
+	top: $calc;
+	text-align: center;
+	@include font-style-2;
 
+	&__list{
 
+		&__item{
+			display: inline-block;
 
+			&:after{
+				content:'';
+				display: inline-block;
+				vertical-align: middle;
+				width: 3rem;
+				height: 0.1rem;
+				margin: 0 1rem;
+				background-color: $dark;
+			}
+
+			&:last-child{
+
+				&:after{
+					content:'';
+					display:none;
+				}
+
+			}
+
+			&__link{
+				
+				@include button($dark,$theme-color,hover);
+
+				&.is-active{
+					display: inline-block;
+					position: relative;
+					vertical-align: top;
+					color: $theme-color;
+
+					&:after{
+						content:'';
+						position: absolute;
+						left: 0;
+						bottom: -1rem;
+						width: 100%;
+						height: 0.2rem;
+						background-color: $theme-color;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}

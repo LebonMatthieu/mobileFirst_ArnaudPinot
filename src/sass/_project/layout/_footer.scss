@@ -1,5 +1,26 @@
 &-footer
-{
-	
+{	
+	padding: 6rem 0;
+	text-align: center;
+
+	&__list{
+		display: inline-block;
+
+		&__item{
+			
+			display: inline-block;
+			margin-right: 3rem;
+
+			&:last-child{
+				margin-right: 0;
+			}
+
+		}
+
+	}
+
+	&__link{
+		@include button($dark,$theme-color,true);
+	}
 
 }

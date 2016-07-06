@@ -131,3 +131,65 @@ https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-5
 	margin-right: -0.25em;
 
 }
+
+
+
+
+//Button
+
+@mixin button($color,$hover-color,$line){
+	display: inline-block;
+	position: relative;
+	
+	color: $color;
+
+	&:hover{
+		color: $hover-color;
+	}
+
+	@if $line == true {
+		
+		&:after{
+			content:'';
+			position: absolute;
+			left: 0;
+			bottom: -1rem;
+			width: 100%;
+			height: 0.2rem;
+			background-color: $color;
+		}
+
+		&:hover{
+
+			color: $hover-color;
+
+			&:after{
+				background-color: $hover-color;
+			}
+
+		}
+
+	}
+
+	@if $line == hover {
+
+
+		&:hover{
+
+			color: $hover-color;
+
+			&:after{
+				content:'';
+				position: absolute;
+				left: 0;
+				bottom: -1rem;
+				width: 100%;
+				height: 0.2rem;
+				background-color: $hover-color;
+			}
+
+		}
+
+	}
+
+}

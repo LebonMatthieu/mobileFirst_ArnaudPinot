@@ -1,29 +1,13 @@
 /* # Links */
 
-&-link 
-{	
-	display: inline-block;
-	position: relative;
-	color: $dark;
+&-link{	
 
-	&:after{
-		content:'';
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 100%;
-		height: 0.2rem;
-		background-color: $dark;
-	}
+	@include button($theme-color,$dark,$line: false);
 
-	&:hover
-	{
-		color: $theme-color;
+	&--alt{
 
-		&:after{
-			background-color: $theme-color;
-		}
-
+		@include button($dark,$theme-color,$line: false);
+		display: inline;
 	}
 
 }
