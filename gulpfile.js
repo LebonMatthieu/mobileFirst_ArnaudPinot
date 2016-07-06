@@ -32,6 +32,7 @@ var sassGlob = require('gulp-sass-glob');
 var sourcemaps = require('gulp-sourcemaps');
 var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
+var mqpacker = require('css-mqpacker');
 
 
 // Scripts
@@ -85,7 +86,8 @@ var env = 'dev';
 
 // Tab Processors 
 var processors = [
-    autoprefixer({browsers: ['last 2 versions','> 2%','ie >= 9']})
+    autoprefixer({browsers: ['last 2 versions','> 2%','ie >= 9']}),
+    mqpacker()
 ];
 
 
@@ -102,7 +104,6 @@ gulp.task('styles', function(){
               )
         .pipe(postcss(processors))
         .pipe(sourcemaps.write())
-        .pipe(rename("styles.css"))
         .pipe(gulp.dest(distCssDir) )
         .pipe(reload({ stream: true }))
 
