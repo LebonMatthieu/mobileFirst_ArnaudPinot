@@ -20,7 +20,7 @@
 	}
 
 	&__link{
-		@include button($dark,$theme-color,true);
+		@include button($dark,$theme-color,false);
 	}
 
 }
