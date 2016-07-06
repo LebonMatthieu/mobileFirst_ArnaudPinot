@@ -1,29 +1,47 @@
 /* # Links */
 
-&-link 
-{	
+&-link{	
 	display: inline-block;
 	position: relative;
-	color: $dark;
+	color: $theme-color;
 
-	&:after{
-		content:'';
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 100%;
-		height: 0.2rem;
-		background-color: $dark;
+	&:hover{
+		color: $dark;
 	}
 
-	&:hover
-	{
-		color: $theme-color;
+	&--alt{
+		display: inline-block;
+		position: relative;
+		color: $dark;
 
-		&:after{
-			background-color: $theme-color;
+		&:hover{
+			color: $theme-color;
 		}
 
+	}
+
+
+	&--underline{
+
+		&:after{
+			content:'';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 0.2rem;
+			background-color: $dark;
+		}
+
+		&:hover{
+
+			color: $theme-color;
+
+			&:after{
+				background-color: $theme-color;
+			}
+
+		}
 	}
 
 }
