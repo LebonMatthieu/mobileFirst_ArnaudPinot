@@ -3,13 +3,9 @@
 	&__word-animation{
 		position: relative;
 	    width: 100vw;
-	    height: 14rem;
+	    height: 10rem;
 	    margin-top: 3rem;
 	    overflow: hidden;
-
-	    @include mq($from: desktop){
-	    	height: 10rem;
-	    }
 
 	    &__wrapper{
 			position: absolute;
@@ -34,7 +30,7 @@
 		  	span,
 		  	h2{
 		    	padding-right:10rem;
-		    	@include font-style-6; 
+		    	@include font-style-7;
 	            color: $theme-color;
 		    }
 

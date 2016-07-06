@@ -9,7 +9,7 @@
 		display: block;
 		position: absolute;
 		right: 8rem;
-		bottom: calc(100% - 52rem / 2); // Slider size / 2 
+		bottom: calc(100% - 45rem / 2); // Slider size / 2 
 		z-index: -1;
 		width: 9999px;
 		height: 9999px;
@@ -39,8 +39,12 @@
 			
 			position: relative;
 			width: 100%;
-			height: 52rem;
+			height: 45rem;
 			margin-bottom: $desktop-gutter;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
 
 			@include mq($from: desktop){
 				@include stretch($length: 0);
