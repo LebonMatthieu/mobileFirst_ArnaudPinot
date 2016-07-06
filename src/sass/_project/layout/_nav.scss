@@ -33,17 +33,21 @@
     @include mq($from: desktop){
     	display: block;
     	position: absolute;
+    	left: 50%;
 		right: 0; 
-		$calc: ($desktop-logo-h / 2) + ($desktop-gutter / 2);
+		$calc: ($desktop-logo-h / 2) + ($desktop-gutter / 2) - 0.5rem;
 		top: $calc;
-		height: auto;
+   		height: auto;
+   		max-width: 136rem;
+   		padding: 0 $desktop-gutter;
 		flex-direction: inherit;
 	    justify-content:inheritr;
 	    resize: inherit;
 	    overflow-y: inherit;
-		text-align: center;
+		text-align: right;
 		color: $dark;
 		background-color: transparent;
+		transform: translateX(-50%); 
 		
 		&:before{
 			content:'';
@@ -112,21 +116,20 @@
 			&__link{
 				
 				@include button($clear,$theme-color,hover);
-				@include font-style-3 ($font-regular, 400, normal, 32/22);
 				margin: 1rem 0;
 
 				
 				@include mq($from: tablet){
 
-			    	@include font-style-4 ($font-regular, 400, normal, 36/36);
 			    	margin: 2rem 0;
 
 			    }
 
 
 			    @include mq($from: desktop){
-				
+					
 			    	@include button($dark,$theme-color,hover);
+			    	@include font-style-2;
 			    	vertical-align: middle;	
 			    	margin: 0;
 
@@ -164,8 +167,8 @@
 	&__icon__wrapper
 	{
 		position: absolute;
-		top: 3rem;
-		right: 3rem;
+		top: 2rem;
+		right: 2rem;
 		padding: 2rem;
 		width: 2.2rem;
 		z-index: 3;
