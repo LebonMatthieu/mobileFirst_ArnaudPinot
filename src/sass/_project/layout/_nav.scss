@@ -38,7 +38,7 @@
     	position: absolute;
     	left: 50%;
 		right: 0; 
-		$calc: ($desktop-logo-h / 2) + ($desktop-gutter / 2) - 0.5rem;
+		$calc: ($desktop-logo-h / 2) + ($desktop-gutter / 2) - 1rem;
 		top: $calc;
    		height: auto;
    		max-width: 136rem;
