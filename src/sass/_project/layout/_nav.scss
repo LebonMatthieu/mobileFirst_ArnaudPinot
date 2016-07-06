@@ -4,20 +4,16 @@
 	/****** Navigation *****/
 	/*****************/
 
-   	display: none;
-   	//display: flex;
-   	position: fixed;
+   display: none;
+ 
+	position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
     width: 100%;
     height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    resize: vertical;
-    overflow-y: scroll;
-    color: $clear;
-    background-color: $dark;
+    overflow: auto;
+    background-color: $alt-theme-color;
 
     &:before{
 
@@ -28,9 +24,18 @@
 		display: block;
 		width: 100%;
 		height: 8rem;
-		background-color: $dark;
+		background-color: $alt-theme-color;
 
 	}
+
+	&.is-open{
+  		display: flex;
+  		flex-direction: column;
+	    justify-content: center;
+	    resize: vertical;
+
+	}
+
 
     @include mq($from: desktop){
 
@@ -83,8 +88,7 @@
 		&__item{
 			display: inline-block;
 			width: 100%;
-			font-size: 0;
-			line-height: 0;
+			@include font-style-5;
 
 			@include mq($from: desktop){
 
