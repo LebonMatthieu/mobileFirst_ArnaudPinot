@@ -33,6 +33,8 @@
 
 			&__link{
 				
+				@include button($dark,$theme-color,hover);
+
 				&.is-active{
 					display: inline-block;
 					position: relative;
