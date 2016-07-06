@@ -1,61 +1,253 @@
 &-navigation{
-	position: absolute;
-	left: 0;
-	right: 0; 
-	$calc: ($desktop-logo-h / 2) + ($desktop-gutter / 2);
-	top: $calc;
-	text-align: center;
-	@include font-style-2;
 
-	&__list{
+	/*****************/
+	/****** Navigation *****/
+	/*****************/
+
+   	display: none;
+   	//display: flex;
+   	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+    overflow-y: scroll;
+    color: $clear;
+    background-color: $dark;
+
+    &:before{
+		content:'';
+		position: fixed;
+		left:0;
+		top: 0;
+		display: block;
+		width: 100%;
+		height: 8rem;
+		background-color: $dark;
+	}
+
+    @include mq($from: desktop){
+    	display: block;
+    	position: absolute;
+		right: 0; 
+		$calc: ($desktop-logo-h / 2) + ($desktop-gutter / 2);
+		top: $calc;
+		height: auto;
+		flex-direction: inherit;
+	    justify-content:inheritr;
+	    resize: inherit;
+	    overflow-y: inherit;
+		text-align: center;
+		color: $dark;
+		background-color: transparent;
+		
+		&:before{
+			content:'';
+			display: none;
+		}
+
+    }
+	
+
+	/*****************/
+	/****** List (ul) *****/
+	/*****************/
+
+	&__list{	
+
+		padding: 8rem $gutter 8rem 0;
+		text-align: right;
+
+		@include mq($from: desktop){
+			padding: 0;
+			text-align: center;
+			display: inline-block;
+		}
+ 	
+
+ 	/*****************/
+	/****** Items (li) *****/
+	/*****************/
 
 		&__item{
 			display: inline-block;
+			width: 100%;
+			font-size: 0;
+			line-height: 0;
 
-			&:after{
-				content:'';
+			@include mq($from: desktop){
+
 				display: inline-block;
-				vertical-align: middle;
-				width: 3rem;
-				height: 0.1rem;
-				margin: 0 1rem;
-				background-color: $dark;
-			}
-
-			&:last-child{
+				width: auto;
 
 				&:after{
 					content:'';
-					display:none;
+					display: inline-block;
+					vertical-align: middle;
+					width: 3rem;
+					height: 0.1rem;
+					margin: 0 1rem;
+					background-color: $dark;
 				}
 
-			}
-
-			&__link{
-				
-				@include button($dark,$theme-color,hover);
-
-				&.is-active{
-					display: inline-block;
-					position: relative;
-					vertical-align: top;
-					color: $theme-color;
+				&:last-child{
 
 					&:after{
 						content:'';
-						position: absolute;
-						left: 0;
-						bottom: -1rem;
-						width: 100%;
-						height: 0.2rem;
-						background-color: $theme-color;
+						display:none;
 					}
 
 				}
 
 			}
+			
+	/*****************/
+	/****** Link *****/
+	/*****************/
+
+			&__link{
+				
+				@include button($clear,$theme-color,hover);
+				@include font-style-3 ($font-regular, 400, normal, 32/22);
+				margin: 1rem 0;
+
+				
+				@include mq($from: tablet){
+
+			    	@include font-style-4 ($font-regular, 400, normal, 36/36);
+			    	margin: 2rem 0;
+
+			    }
+
+
+			    @include mq($from: desktop){
+				
+			    	@include button($dark,$theme-color,hover);
+			    	vertical-align: middle;	
+			    	margin: 0;
+
+					&.is-active{
+						display: inline-block;
+						position: relative;
+						color: $theme-color;
+
+						&:after{
+							content:'';
+							position: absolute;
+							left: 0;
+							bottom: -1rem;
+							width: 100%;
+							height: 0.2rem;
+							background-color: $theme-color;
+						}
+
+					}
+
+			    }
+
+			}
+
 
 		}
+	}
+
+	
+
+	/*****************/
+	/****** Icon *****/
+	/*****************/
+
+	&__icon__wrapper
+	{
+		position: absolute;
+		top: 3rem;
+		right: 3rem;
+		padding: 2rem;
+		width: 2.2rem;
+		z-index: 3;
+
+		&:hover
+		{	
+			cursor: pointer;	
+		}
+
+		&.is-open{
+			position: fixed;
+		}
+		
+	}
+
+
+	&__icon
+	{	
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 2.2rem;
+		height: 0.2rem;
+		transform: translateX(-50%) translateY(-50%);
+		background-color: $dark;
+		transition: background-color 0.3s ease 0s;
+		cursor: pointer;
+
+		&:before,
+		&:after
+		{
+			content:'';
+			display: inline-block;
+			position: absolute;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			transition: transform 0.3s ease 0s, top 0.3s ease 0.3s, background-color 0s ease 0.4s;
+			background-color: $dark;
+		}
+
+		&:before
+		{
+			top: -0.8rem;
+		}
+
+		&:after
+		{
+			top: 0.8rem;
+		}
+
+
+		/*****************/
+		/****** When menu is open *****/
+
+		.ap-navigation__icon__wrapper.is-open &
+		{	
+			background-color:transparent;
+
+			&:before,&:after
+			{	
+				top:0;
+				transition: transform 0.3s ease 0.3s, top 0.3s ease 0s, background-color 0.2s ease 0s;
+		    	background-color: $clear;
+		    }
+
+		    &:before
+		    {
+		    	transform: rotate(135deg);
+		    }
+
+		    &:after
+		    {
+		    	 transform: rotate(225deg);
+		    }
+		    	    
+		}
+
+		@include mq($from:desktop){
+			display: none;
+		}	
 
 	}
 
