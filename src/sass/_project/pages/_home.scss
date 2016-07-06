@@ -1,20 +1,22 @@
-&-introduction,
+&-introduction{
+	padding-bottom: 4rem;
+
+	@include mq($from: desktop){
+		padding-bottom: 0;
+	
+	}
+}
+
+
 &-references{
 	
-	padding-top: 7rem;
+	padding: 4rem 0;
 
-	&__content{
-		max-width: 345px;
-	    margin-right: 0;
-	    margin-left: auto;
-	    display: block;
+	@include mq($from: tablet){
+		padding: 4rem 0 0;
+	
 	}
 
-}    
-
-
-&-references{
-	
 	&__title{
 		display: inline-block;
 		position: relative;
@@ -33,9 +35,21 @@
 	}
 
 	&__list{
+		
+		@include font-style-4;
+
+		@include mq($from: desktop){
+			@include font-style-2;
+		
+		}
 
 		&__item{
-			display: inline;
+
+			@include mq($from: tablet){
+				display: inline;
+			}
+
+			display: block;
 
 			&:after{
 				content: ".";
@@ -49,4 +63,28 @@
 			}
 		}
 	}
+}    
+
+
+
+&-introduction,
+&-references{
+	
+
+	@include mq($from: desktop){
+		padding-top: 7rem;
+	
+	}
+
+		&__content{
+			@include mq($from: desktop){
+				max-width: 345px;
+			    margin-right: 0;
+			    margin-left: auto;
+			    display: block;
+		    }
+		}
+	
+
+
 }    
