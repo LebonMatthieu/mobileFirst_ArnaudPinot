@@ -1,50 +1,72 @@
 &-works{
 
 	position: relative;
-	color: $clear;
-	
+	color: $dark;
+
 	// Blue Rect in background
 	&:before{
 		content:'';
 		display: block;
 		position: absolute;
-		right: 8rem;
-		bottom: calc(100% - 45rem / 2); // Slider size / 2 
+		right: - $gutter;
+		bottom: calc(100% - 10rem); // 100% - First Article Image height
 		z-index: -1;
 		width: 9999px;
 		height: 9999px;
 		background-color: $alt-theme-color;
 	}
 
+
+	@include mq($from: tablet){
+		color: $clear;
+
+		// Blue Rect in background
+		&:before{
+			right: 8rem;
+			bottom: calc(100% - 45rem / 2); // First article height / 2 
+		}
+	}
+	
+
 	@include mq($from: desktop){
 		position: absolute;
 		top: 0;
 		left: 0;
-
+		
+		// Blue Rect in background
 		&:before{
-			bottom: calc(52rem / 2); // Slider size / 2
+			bottom: calc(52rem / 2); // Slider height / 2
 		}
 	}
+
+
 
 	&__list{
 		position: relative;
 		height: 100%;
 
-
 		@include mq($from: desktop){
 			height: 52rem;
 		}
+
+
+
 
 		&__items{
 			
 			position: relative;
 			width: 100%;
-			height: 45rem;
-			margin-bottom: $desktop-gutter;
+			margin-bottom: 6rem;
 
 			&:last-child{
 				margin-bottom: 0;
 			}
+
+			@include mq($from: tablet){
+				height: 45rem;
+				margin-bottom: $desktop-gutter;
+			}
+			
 
 			@include mq($from: desktop){
 				@include stretch($length: 0);
@@ -64,36 +86,57 @@
 
 		&__image{
 			width: 100%;
-			height: 100%;
+			height: 20rem;
 			background-size: cover;
-			background-position: center;
+			background-position: top;
+
+			@include mq($from: tablet){
+				height: 100%;
+			}
+
 		}
 
 		&__content{
-			position: absolute;
-			left: $desktop-gutter;
-			right: $desktop-gutter;
-			bottom: $desktop-gutter;
-			max-width: 66.66%;
+			
+			position: relative;
 
+			@include mq($from: tablet){
+				position: absolute;
+				left: $desktop-gutter;
+				right: $desktop-gutter;
+				bottom: $desktop-gutter;
+				max-width: 66.66%;
+			}
+			
 		}
 
 		&__role{
-			display: inline-block;
-			position: absolute;
-			top: 3rem;
-			right: 4rem;
-			transform-origin: right bottom;
-			transform: rotate(-90deg) translateY(50%);
+			
+			display: none;
+			@include mq($from: tablet){
+				display: inline-block;
+				position: absolute;
+				top: 3rem;
+				right: 4rem;
+				transform-origin: right bottom;
+				transform: rotate(-90deg) translateY(50%);
+			}
+			
 		}
 		
 		&__title{
 			overflow: hidden;
 			position: relative;
-			
+			margin-top: 2rem;
+			margin-bottom: 1rem; 
+
 			&__content{
 				display: table;
-				transform: translateX(-3rem);
+				transform: translateX(-1.8rem);
+
+				@include mq($from: tablet){
+					transform: translateX(-3rem);
+				}
 
 				&--number{
 					display: table-cell;
@@ -115,7 +158,12 @@
 
 		&__link{
 			@include font-style-2;
-			@include button($clear,$dark,true);
+			@include button($theme-color,$dark,true);
+
+			@include mq($from: tablet){
+				@include button($clear,$theme-color,true);
+			}
+			
 		}
 
 	}

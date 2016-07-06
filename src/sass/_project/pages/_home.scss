@@ -10,14 +10,14 @@
 
 &-references{
 	
-	padding: 4rem 0;
+	margin: 7rem 0 6rem;
 
 	@include mq($from: tablet){
-		padding: 4rem 0 0;
+		margin: 6rem 0 0;
 	}
 
 	@include mq($from: desktop){
-		padding-left: calc(66.66% + #{$desktop-gutter;});
+		margin: 0;
 	}
 
 	&__title{
