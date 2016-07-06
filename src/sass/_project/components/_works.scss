@@ -8,13 +8,14 @@
 		content:'';
 		display: block;
 		position: absolute;
-		right: -$gutter;
+		right: - $gutter;
 		bottom: calc(100% - 10rem); // 100% - First Article Image height
 		z-index: -1;
 		width: 9999px;
 		height: 9999px;
 		background-color: $alt-theme-color;
 	}
+
 
 	@include mq($from: tablet){
 		color: $clear;
@@ -55,7 +56,7 @@
 			
 			position: relative;
 			width: 100%;
-			margin-bottom: $gutter;
+			margin-bottom: 6rem;
 
 			&:last-child{
 				margin-bottom: 0;
@@ -74,8 +75,6 @@
 			}
 
 		}
-
-
 
 	}
 
@@ -113,8 +112,9 @@
 
 		&__role{
 			
-			display: inline-block;
+			display: none;
 			@include mq($from: tablet){
+				display: inline-block;
 				position: absolute;
 				top: 3rem;
 				right: 4rem;
@@ -127,10 +127,16 @@
 		&__title{
 			overflow: hidden;
 			position: relative;
-			
+			margin-top: 2rem;
+			margin-bottom: 1rem; 
+
 			&__content{
 				display: table;
-				transform: translateX(-3rem);
+				transform: translateX(-1.8rem);
+
+				@include mq($from: tablet){
+					transform: translateX(-3rem);
+				}
 
 				&--number{
 					display: table-cell;
@@ -152,7 +158,7 @@
 
 		&__link{
 			@include font-style-2;
-			@include button($dark,$theme-color,true);
+			@include button($theme-color,$dark,true);
 
 			@include mq($from: tablet){
 				@include button($clear,$theme-color,true);

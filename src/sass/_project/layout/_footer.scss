@@ -26,6 +26,14 @@
 			display: inline-block;
 			margin-right: 5rem;
 
+			&:nth-child(odd){
+				width: 50%;
+			}
+
+			&:nth-child(even){
+				width: 50%;
+			}
+
 			&:last-child{
 				margin-right: 0;
 			}
@@ -37,7 +45,7 @@
 	&__link{
 
 		@include button($dark,$theme-color,false);
-		
+
 	}
 
 }
