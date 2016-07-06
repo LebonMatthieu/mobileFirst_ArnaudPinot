@@ -70,7 +70,7 @@
   }
     line-height: $line-height;
 
-    @include mq($from: desktop){
+    @include mq($from: tablet){
       font-size: 60px;
       font-size: 6rem;
     }
@@ -87,7 +87,7 @@
   }
     line-height: $line-height;
   
-   @include mq($from: desktop){
+   @include mq($from: tablet){
       font-size: 100px;
       font-size: 10rem;
     }

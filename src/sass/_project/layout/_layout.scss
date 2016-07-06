@@ -36,15 +36,12 @@
 
 			width: 100%;
 			padding-left: 0;
-
-			@include mq($from: tablet){
-				width: 66.66%;;
-			}
 			
 			@include mq($from: desktop){
 				width: 100%;
 				padding-left: calc(66.66% + #{$desktop-gutter;});
 			}
+
 		}
 
 	}

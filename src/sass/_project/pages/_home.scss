@@ -10,14 +10,37 @@
 
 &-references{
 	
-	margin: 7rem 0 6rem;
+	position: relative;
+	margin: 10rem 0 6rem;
+
+	&:before{
+		content:'';
+		display: block;
+		position: absolute;
+		left: -$gutter;
+		right: -$gutter;
+		top: - $gutter * 2; 
+		bottom: - $gutter * 2;
+		background-color: $alt-theme-color;
+	}
 
 	@include mq($from: tablet){
-		margin: 6rem 0 0;
+		margin: 8rem 0 2rem;
+
+		&:before{
+			left: - $desktop-gutter;
+			right: 8rem;
+			background-color: $alt-theme-color;
+		}
 	}
 
 	@include mq($from: desktop){
 		margin: 0;
+
+		&:before{
+			content:'';
+			display: none;
+		}
 	}
 
 	&__title{
@@ -56,13 +79,16 @@
 
 			&:after{
 				content: ".";
+				position: relative;
 				color: $dark;
 			}
 
 			&:last-child(){
+
 				&:after{
 					content:'';
 				}
+
 			}
 		}
 	}
@@ -72,14 +98,18 @@
 
 &-introduction,
 &-references{
-	
 
 	@include mq($from: desktop){
-		padding-top: 7rem;
+		padding-top: 6rem;
 	
 	}
 
 		&__content{
+
+			@include mq($from: tablet){
+				max-width: 66.66%;
+		    }
+
 			@include mq($from: desktop){
 				max-width: 345px;
 			    margin-right: 0;
