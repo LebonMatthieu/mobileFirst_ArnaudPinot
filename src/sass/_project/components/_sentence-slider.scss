@@ -1,4 +1,5 @@
 &-header{
+
 	&__word-animation{
 		position: relative;
 	    width: 100vw;
@@ -29,25 +30,30 @@
 		  	span,
 		  	h2{
 		    	padding-right:10rem;
-		    	@include font-style-6; 
+		    	@include font-style-7;
 	            color: $theme-color;
 		    }
 
 	    }
+
     }
+
 }
 
 
 
 @include keyframes(translate-keywords) {
+
    0% {
 	    -ms-transform: translateX(0); /* IE 9 */
     	-webkit-transform: translateX(0); /* Chrome, Safari, Opera */
 		transform: translateX(0);
 	}
+
 	100% {
 	    -ms-transform: translateX(-100%); /* IE 9 */
     	-webkit-transform: translateX(-100%); /* Chrome, Safari, Opera */
 		transform: translateX(-100%);
 	}
+
 }

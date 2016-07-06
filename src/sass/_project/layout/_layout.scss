@@ -5,7 +5,7 @@
 	padding: 0 $gutter;
 	max-width: 136rem;
 
-	@include mq($from: desktop) {
+	@include mq($from: tablet) {
 		padding: 0 $desktop-gutter; 
     }
 
@@ -13,24 +13,31 @@
 
 &-main-layout{
 	
-	position: relative;
-	width: 100%;
-	max-width: 136rem;
-	min-height: 52rem; //size of slider
-	margin: auto;
+	@extend .ap-centered;
+
+	@include mq($from: desktop){
+		position: relative;
+		width: 100%;
+		min-height: 52rem; //size of slider
+	}
+
+	
 
 	&__col{
 		
 		&--wide{
-			width: 66.66%;
-			padding-left: $desktop-gutter;
+			@include mq($from: desktop){
+				width: 66.66%;
+				padding-left: $desktop-gutter;
+			}
 		}
 
 		&--small{
-			padding: 0 $desktop-gutter;
-			width: 100%;
-			padding-left: calc(66.66% + #{$desktop-gutter;});
-			padding-right: $desktop-gutter;
+			width: 66.66%;
+			@include mq($from: desktop){
+				width: 100%;
+				padding-left: calc(66.66% + #{$desktop-gutter;});
+			}
 		}
 
 	}

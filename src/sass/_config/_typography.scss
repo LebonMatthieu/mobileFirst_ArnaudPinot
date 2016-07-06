@@ -10,12 +10,12 @@
 }
 
 
-@mixin font-style-2 ($font: $font-regular, $weight : 500, $style: normal, $line-height : 18 / 18){ //Semibold
+@mixin font-style-2 ($font: $font-regular, $weight : 500, $style: normal, $line-height : 27 / 17){ //Semibold
   font:{
     family: $font;
       style: $style;
-    size: 18px;
-    size: 1.8rem;
+    size: 17px;
+    size: 1.7rem;
     weight: $weight;
   }
     line-height: $line-height;
@@ -26,27 +26,38 @@
   font:{
     family: $font;
       style: $style;
-    size: 20px;
-    size: 2rem;
+    size: 18px;
+    size: 1.8rem;
     weight: $weight;
   }
     line-height: $line-height;
 
+   @include mq($from: desktop){
+      font-size: 20px;
+      font-size: 2rem;
+    }
 
 }
 
 
-@mixin font-style-4 ($font: $font-regular, $weight : 700, $style: normal, $line-height : 32/22){ 
+@mixin font-style-4 ($font: $font-regular, $weight : 500, $style: normal, $line-height : 32/22){ //Semibold
   font:{
     family: $font;
       style: $style;
-    size: 22px;
-    size: 2.2rem;
+    size: 20px;
+    size: 2.0rem;
     weight: $weight;
   }
     line-height: $line-height;
 
+    @include mq($from: desktop){
+      font-size: 22px;
+      font-size: 2.2rem;
+    }
+
 }
+
+@include font-style-4 ($font: $font-regular, $weight : 700, $style: normal, $line-height : 32/22); // Bold
 
 
 @mixin font-style-5 ($font: $font-regular, $weight : 800, $style: normal, $line-height : 70/60){ 
@@ -71,6 +82,19 @@
     weight: $weight;
   }
     line-height: $line-height;
+
+}
+
+@mixin font-style-7 ($font: $font-regular, $weight : 700, $style: normal, $line-height : 1){ //ANIMATION
+  font:{
+    family: $font;
+      style: $style;
+    size: 100px;
+    size: 10rem;
+    weight: $weight;
+  }
+    line-height: $line-height;
+
 }
 
 
