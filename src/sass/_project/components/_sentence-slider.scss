@@ -3,9 +3,13 @@
 	&__word-animation{
 		position: relative;
 	    width: 100vw;
-	    height: 10rem;
+	    height: 6rem;
 	    margin-top: 3rem;
 	    overflow: hidden;
+
+	    @include mq($from: tablet){
+	    	height: 10rem;
+	    }
 
 	    &__wrapper{
 			position: absolute;

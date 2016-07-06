@@ -5,8 +5,14 @@
 
 	&__logo{
 		display: block;
-		width: $desktop-logo-h;
-		height: $desktop-logo-h;
+		width: $logo-h;
+		height: $logo-h;
+
+		@include mq($from:tablet){
+			width: $desktop-logo-h;
+			height: $desktop-logo-h;
+		}
+		
 
 		svg{
 

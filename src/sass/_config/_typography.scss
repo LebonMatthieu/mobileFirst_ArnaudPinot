@@ -57,10 +57,43 @@
 
 }
 
-@include font-style-4 ($font: $font-regular, $weight : 700, $style: normal, $line-height : 32/22); // Bold
+//@include font-style-4 ($font: $font-regular, $weight : 700, $style: normal, $line-height : 32/22); // Bold
 
 
 @mixin font-style-5 ($font: $font-regular, $weight : 800, $style: normal, $line-height : 70/60){ 
+  font:{
+    family: $font;
+      style: $style;
+    size: 45px;
+    size: 4.5rem;
+    weight: $weight;
+  }
+    line-height: $line-height;
+
+    @include mq($from: tablet){
+      font-size: 60px;
+      font-size: 6rem;
+    }
+}
+
+
+@mixin font-style-6 ($font: $font-regular, $weight : 700, $style: normal, $line-height : 1){ 
+  font:{
+    family: $font;
+      style: $style;
+    size: 60px;
+    size: 6rem;
+    weight: $weight;
+  }
+    line-height: $line-height;
+  
+   @include mq($from: tablet){
+      font-size: 100px;
+      font-size: 10rem;
+    }
+}
+
+@mixin font-style-7 ($font: $font-regular, $weight : 700, $style: normal, $line-height : 1){ //ANIMATION
   font:{
     family: $font;
       style: $style;
@@ -70,30 +103,10 @@
   }
     line-height: $line-height;
 
-}
-
-
-@mixin font-style-6 ($font: $font-regular, $weight : 700, $style: normal, $line-height : 1){ 
-  font:{
-    family: $font;
-      style: $style;
-    size: 100px;
-    size: 10rem;
-    weight: $weight;
-  }
-    line-height: $line-height;
-
-}
-
-@mixin font-style-7 ($font: $font-regular, $weight : 700, $style: normal, $line-height : 1){ //ANIMATION
-  font:{
-    family: $font;
-      style: $style;
-    size: 100px;
-    size: 10rem;
-    weight: $weight;
-  }
-    line-height: $line-height;
+    @include mq($from: tablet){
+      font-size: 100px;
+      font-size: 10rem;
+    }
 
 }
 

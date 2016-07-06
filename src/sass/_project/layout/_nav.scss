@@ -169,12 +169,19 @@
 
 	&__icon__wrapper
 	{
+
+
 		position: absolute;
-		top: $desktop-gutter;
-		right: $desktop-gutter;
+		top: calc( (#{$logo-h} / 2) + #{$gutter} - 2.2rem);
+		right: $gutter;
 		padding: 2rem;
 		width: 2.2rem;
 		z-index: 3;
+
+		@include mq(tablet){
+			right: $desktop-gutter;
+			top: $desktop-gutter;
+		}
 
 		&:hover
 		{	
