@@ -1,1 +1,32 @@
-/* # Boutons */
+@at-root{
+	
+	/*****************/
+	/****** Slider Button *****/
+	/*****************/
+
+	.next-slide-button{
+
+		display: none;
+
+		@include mq($from: desktop){
+			position: absolute;
+			right: $desktop-gutter;
+			bottom: 3rem;
+			padding: 1rem 2rem;
+			border: 2px solid $clear;
+			@include font-style-1;
+    		background: transparent;
+
+    		transition: color 0.3s ease-in, background-color 0.3s ease-in;
+			
+			&:hover{
+				color: $theme-color;
+				background-color: $clear;
+				transition: color 0.3s ease-in, background-color 0.3s ease-in;
+			}
+
+		}
+
+	}
+
+}

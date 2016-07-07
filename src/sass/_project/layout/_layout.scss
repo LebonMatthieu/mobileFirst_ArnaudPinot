@@ -1,4 +1,6 @@
-/* # Layout */
+/*****************/
+/****** Centered grid *****/
+/*****************/
 
 &-centered{
 	margin: auto;
@@ -11,6 +13,11 @@
 
 }
 
+
+/*****************/
+/****** Main layout for desktop *****/
+/*****************/
+
 &-main-layout{
 	
 	@extend .ap-centered;
@@ -21,6 +28,11 @@
 		min-height: 52rem; //size of slider
 	}
 
+
+	
+	/*****************/
+	/****** Types of cols *****/
+	/*****************/
 	
 
 	&__col{

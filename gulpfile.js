@@ -157,6 +157,7 @@ gulp.task('scripts', ['jsLint'], function(){
 
         // Libs only first level elements in the vendors folder
         path.join(srcJsDir, 'vendors')+'/jQuery.js',
+        path.join(srcJsDir, 'vendors')+'/picturefill-background.js',
 
         //Then my scripts
         path.join(srcJsDir)+'/*.js'
